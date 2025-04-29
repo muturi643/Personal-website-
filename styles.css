@@ -1,0 +1,101 @@
+h1{
+    font-size: 70px;
+
+}
+
+h2{
+    font-size: 2em;
+}
+
+h1 p{
+    font-size: 25px;
+}
+
+body{
+    background-color:  #E1F7F5;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    align-content: center;
+}
+
+.container{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.container-1st{
+    background-color:#1E0342 ;
+    
+    
+}
+
+.pt{
+    margin-left: 20px;
+}
+
+.container-2nd {
+    background-color: #1E0342;
+}
+
+.Education{
+    
+   text-align: center;
+}
+
+.Education > img{
+    margin: 0px;
+    padding: 0px;
+    float: left;
+    border: 0px;
+    
+}
+.container-3rd {
+    background-color: #0E46A3;
+    color: #E1F7F5;
+}
+
+.container-4th{
+    background-color: #9AC8CD;
+    color: #1E0342;
+}
+
+div{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+
+.footer{
+    color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
