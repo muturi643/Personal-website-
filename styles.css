@@ -1,216 +1,308 @@
-/* =====================
-   GLOBAL RESET & THEME
-===================== */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
+/* Base Styles (Mobile First) */
 :root {
-  --primary: #0f172a;
-  --secondary: #2563eb;
-  --accent: #38bdf8;
-  --bg: #f8fafc;
-  --card: #ffffff;
-  --text: #1e293b;
-  --muted: #64748b;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.7;
-}
-
-/* =====================
-   TYPOGRAPHY
-===================== */
-h1, h2, h3 {
-  font-weight: 700;
-}
-
-h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--primary);
-}
-
-p {
-  color: var(--muted);
-  margin-bottom: 1rem;
-}
-
-/* =====================
-   LAYOUT CONTAINERS
-===================== */
-.container-1st,
-.container-2nd,
-.container-3rd,
-.container-4th {
-  max-width: 1200px;
-  margin: 3rem auto;
-  padding: 2.5rem;
-  border-radius: 16px;
-  background: var(--card);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-}
-
-/* =====================
-   HERO SECTION
-===================== */
-#hero {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  color: white;
-  padding: 4rem 1rem;
-}
-
-#hero h1,
-#hero p {
-  color: white;
-}
-
-#hero .row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: center;
-}
-
-#hero img {
-  border-radius: 50%;
-  max-width: 260px;
-  border: 5px solid var(--accent);
-}
-
-/* =====================
-   EDUCATION
-===================== */
+    --primary-color: #1E0342;
+    --secondary-color: #0E46A3;
+    --accent-color: #9AC8CD;
+    --light-color: #E1F7F5;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+  }
+  
+  p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Containers */
+  .container-1st, 
+  .container-2nd, 
+  .container-3rd, 
+  .container-4th {
+    padding: 1.5rem;
+    margin: 1rem auto;
+    width: 95%;
+    border-radius: 8px;
+  }
+  
+  .container-1st {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .container-2nd {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .container-3rd {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+  }
+  
+  .container-4th {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+  }
+  
+  /* Hero Section */
+  #hero .row {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  #hero .pt {
+    border-radius: 8px;
+    margin: 0 auto;
+  }
+  
+  /* Education Section */
 .education-content {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .education-image img {
-  border-radius: 14px;
-  object-fit: cover;
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.education-details {
+    text-align: center;
 }
 
 .education-item {
-  padding: 1rem 0;
-  border-left: 4px solid var(--secondary);
-  padding-left: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .education-item h3 {
-  color: var(--primary);
+    color: var(--light-color);
+    margin-bottom: 0.5rem;
 }
 
-/* =====================
-   WORK EXPERIENCE
-===================== */
-.workexperience {
-  text-align: center;
+/* Tablet & Desktop View */
+@media (min-width: 768px) {
+    .education-content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .education-image {
+        flex: 1;
+    }
+    
+    .education-details {
+        flex: 1;
+        text-align: left;
+        padding-left: 2rem;
+    }
 }
-
-/* =====================
-   SKILLS
-===================== */
-.skills {
-  text-align: center;
-}
-
-.skills img {
-  width: 80px;
-  margin: 1rem 0;
-}
-
-/* =====================
-   PROJECTS
-===================== */
+  
+  /* Projects Section */
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
 .project-item {
-  background: var(--card);
-  border-radius: 16px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
 .project-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
 }
 
 .project-item img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
 }
 
 .project-item p {
-  padding: 1rem;
-  font-weight: 600;
-  color: var(--primary);
+    margin-top: 0.5rem;
+    font-weight: bold;
 }
+  
+  /* About & Contact Section */
+  .container-4th {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .Aboutme, .Contactme {
+    text-align: center;
+  }
+  
+  .Aboutme img {
+    width: 60px;
+    height: 60px;
+    margin: 0.5rem;
+  }
+  
+  /* Footer */
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .footer a {
+    color: blue;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Media Queries for Larger Screens */
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3.5rem;
+    }
+    
+    h2 {
+      font-size: 2.2rem;
+    }
+    
+    /* Hero Section */
+    #hero .row {
+      flex-direction: row;
+      align-items: center;
+    }
+    
+    #hero .col-lg-7 {
+      flex: 7;
+    }
+    
+    #hero .col-lg-4 {
+      flex: 4;
+    }
+    
+    /* Education Section */
+    .Education {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      text-align: left;
+    }
+    
+    .Education > img {
+      width: 45%;
+      max-width: 500px;
+    }
+    
+    .Education-text {
+      width: 45%;
+    }
+    
+    /* Projects Grid */
+    #Projects {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    
+    /* About & Contact */
+    .container-4th {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    
+    .Aboutme, .Contactme {
+      width: 45%;
+    }
+    
+    /* Footer */
+    .footer {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .container-1st, 
+    .container-2nd, 
+    .container-3rd, 
+    .container-4th {
+      width: 85%;
+      max-width: 1200px;
+    }
+    
+    /* Projects Grid */
+    #Projects {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    h1 {
+      font-size: 4rem;
+    }
+  }
 
-/* =====================
-   ABOUT & CONTACT
-===================== */
-.container-4th {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
 
-.Aboutme img {
-  width: 60px;
-  margin: 0.5rem;
-}
 
-/* =====================
-   FOOTER
-===================== */
-#footer {
-  background: var(--primary);
-  padding: 2rem 1rem;
-  margin-top: 4rem;
-}
 
-.footer {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-  align-items: center;
-}
 
-.footer a {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 600;
-}
 
-.footer a:hover {
-  text-decoration: underline;
-}
 
-.footer p {
-  color: #cbd5f5;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
